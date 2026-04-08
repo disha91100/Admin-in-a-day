@@ -1,126 +1,176 @@
-# Admin in a day
+## Admin in a day
 
-## M02-HOL Reporting and Telemetry
+# M02-HOL-Reporting and Telemetry
 
-### Lab Scenario
+### Estimated Duration: 90 Minutes
 
-In this Hands-on Lab, you are an administrator helping adopt the Power Platform.
-An important part of keeping the Power Platform running successfully is monitoring the ongoing usage. 
-In this hands-on lab you will be using the platform tools and the COE Starter Kit to perform usage 
-monitoring.
+## Lab Scenario
+
+In this Hands-on Lab, you are an administrator helping adopt the Power Platform. An important part of keeping the Power Platform running successfully is monitoring the ongoing usage. In this hands-on lab, you will be using the platform tools and the COE Starter Kit to 
+perform usage monitoring.
+
+## Lab Objectives
+
+In this lab, you will complete the following exercises:
+
+- Exercise 1 - Explore the out-of-the-box analytics
+- Exercise 2 – Configure Dataverse logging for a table
+- Exercise 3 - Set up inventory components
+
 
 ### Lab Test Environment
 
-This hands-on lab is designed to be completed in an environment setup for multiple students to complete 
-the Admin in a day series of hands on labs.
-You need to use the assigned user and environment information to complete this lab. You must have 
-completed the prior labs to successfully complete this lab.
+This lab is designed to be completed in an environment setup for multiple students to complete the Admin in a day series of hands-on labs.
 
-## Exercise 1: Explore the out of the box analytics
+You need to use the assigned user and environment information to complete this lab. You must have completed the prior labs to complete this lab.
 
-Now in this exercise, you will explore the out of the box analytics that are available from the Power 
-Platform admin center.
+## Exercise 1: Explore the out-of-the-box analytics
 
-### Task 1: Explore the Power Automate analytics
+In this exercise, you will explore the out-of-the-box analytics that are available from the Power Platform admin center.
 
-1. Navigate to [Power Platform admin center](https://admin.powerplatform.microsoft.com).
-2. Expand **Analytics**.
-3. Select **Power Automate**. Select change filters and change to the Power Platform COE environment.
+1. Navigate to **Power Platform admin center**.
 
-    ![](images/M02/image1.png)
+2. Select **Monitor (1)** from the left pane, then select **Power Apps (2)** and click on the **Open settings (3)**
 
-4. Review the visuals in the **Runs** tab and then select the **Usage** tab.
+    ![](images/paop.png)
 
-    ![](images/M02/image2.png)
-    
-5. Review the visuals in the **Usage** tab.
-6. Review the visuals in the rest of the tabs.
-7. In the upper right corner change Environment level analytics to Tenant level analytics.
+3. **Enable (1)** the Tenant-level analytics  and click on **Save(2)**. Navigate back to Monitor and select the Power apps
 
-     ![](images/M02/image3.png)
-     
-8. Now you are looking at data for all environments you have access to.
-9. Review the Usage data and then switch to Maker Activity and Inventory and review the data available. Notice you can still filter on more specific criteria.
+   ![](images/enableana.png)
 
-     ![](images/M02/image4.png)
-     
-### Task 2: Explore the Power Apps analytics
+   >**Note**: Once enabled, this feature aggregates data from environments across all regions in your tenant and copies it into the default environment region for tenant-level reporting. A tenant-level administrator role is required for the one-time operation of granting consent for tenant-level analytics.
 
-1. Navigate to [Power Platform admin center](https://admin.powerplatform.microsoft.com).
-2. Expand **Power Apps**.
-3. Review the visuals in all tabs.
+4. The **Overview** tab displays a message indicating that tenant-level analytics has been enabled. **Typically, these reports are displayed within 24-48 hours of enabling the feature**.
 
-    ![](images/M02/image5.png)
-    
-4. In the upper right corner change Environment level analytics to Tenant level analytics.
+   ![](images/ppap.png)
 
-    ![](images/M02/image3.png)
-    
-5. Now you are looking at data for all environments you have access to.
-6. Review the Usage data and then switch to Maker Activity and Inventory and review the data available. Notice you can still filter on more specific criteria.
-7. Hover your mouse over the far-right corner of data under Region and you can click on … to show more options.
+    > **Note**: **The below **tasks 1,2 and 3** has been made as read only because the service can take 24 to 36 hours to reflect service activities from the previous day**. Please go through the provided link for more details [Tenant-level analytics for Power Apps](https://learn.microsoft.com/en-us/power-platform/admin/tenant-level-analytics?tabs=new#how-do-i-enable-tenant-level-analytics)   
 
-    ![](images/M02/image6.png)
-    
-8. Select Export data.
+### Task 1: Explore the Power Automate analytics (Read only)
 
-    ![](images/M02/image7.png)
-    
-9. If you have Excel installed choose one of the options and select Export. After the file downloads review the details available. If you don’t have Excel simply select Cancel.
+1. Navigate to **Power Platform admin center**.
 
-    ![](images/M02/image8.png)
-    
-### Task 3: Explore the Capacity analytics
+1. Expand **Analytics** and select **Power Automate**.
 
-1. Navigate to [Power Platform admin center](https://admin.powerplatform.microsoft.com).
-2. Expand **Resources** and select **Capacity**.
+   ![](images/M02/M2-EX1-T1-S3.png)
 
-    ![](images/M02/image9.png)
-    
-3. Notice the **Storage capacity usage**.
+1. Ensure you’re under the **Environment View (1)**. Select **Change filters (2)**
 
-    ![](images/M02/image10.png)
-    
-1. Notice the **Storage capacity by source**.
+   ![](images/M02/pp123.png)
 
-    ![](images/M02/image11.png)
-    
-1. Go to the **Top storage usage by environment** section and notice the capacity usage by top environments.
+1. Change the Environmnent to **Power Platform COE (1)** environment and the **Apply (2)**.
 
-    ![](images/M02/image12.png)
-    
-1. Click to select the **Dataverse** tab.
+   ![](images/M03/pp124.png)
 
-    ![](images/M02/image13.png)
-    
-1. Locate the **Device Ordering Development** environment storage capacity and click **Details**.
+1. Review the visuals in the **Runs** tab and then select the **Usage** tab.
 
-    ![](images/M02/image14.png)
-    
-1. Click on the **Chart menu** button and select **Download all tables**.
+   ![](images/M02/M2-EX1-T1-S6.png)
 
-    ![](images/M02/image15.png)
-    
-1. Click Open file. You should see list of all tables and their database size in MB.
+1. Review the visuals in the **Usage** tab.
 
-    ![](images/M02/image16.png)
-    
-1. Close the Excel file.
-1. Expand **Analytics** and select **Dataverse**.
+1. Review the visuals in the rest of the tabs.
 
-    ![](images/M02/image17.png)
-    
+1. In the top left corner of the screen, under the header, select **Overview** to review tenant-level
+    analytics.
+
+    ![](images/M02/M2-EX1-T1-S9.png)
+
+1. Now you are looking at data for all environments you have access to.
+
+1. Review the **Usage** data available on this tab, and then switch to **Maker Activity** and **Inventory** to review the other data available. Notice you can still filter on more specific criteria using the dropdowns.
+
+    ![](images/M02/M2-EX1-T1-S11.png)
+
+### Task 2: Explore the Power Apps analytics (Read only)
+
+1. In the **Power Platform admin center**. Under **Analytics**, expand **Power Apps (1)**. Change the Primary Tab to **Environment View (2)**. Click on **Change filters (3)**. Switch the environment to **Power Platform COE (4)** by changing the available filters and the click on **Apply (4)**
+
+   ![](images/M03/pp125.png)
+
+1. Review the visuals in **Usage**, and all other tabs.
+
+1. In the top left corner of the screen, under the header, select **Overview** to review tenant-level analytics.
+
+   ![](images/M02/M2-EX1-T2-S6.png)
+
+1. Now you are looking at data for all environments you have access to.
+
+1. Review the **Usage** data available on this tab, and then switch to **Maker Activity** and **Inventory** to review the other data available. Notice you can still filter on more 
+   specific criteria.
+
+   ![](images/M02/M2-EX1-T2-S8.png)
+
+1. Hover your mouse over the far-right corner of the unique user's data, and under **Region** you can select **...** to show more options.
+
+   ![](images/M02/M2-EX1-T2-S9.png)
+
+1. Select **Export data**.
+
+    ![](images/M02/M2-EX1-T2-S10.png)
+
+1. If you have Excel installed choose one of the options and select **Export**. After the file downloads review the details available. If you don’t have Excel simply select **Cancel**.
+
+    ![](images/M02/M2-EX1-T2-S11.png)
+
+### Task 3: Explore the Capacity analytics (Read only)
+
+1. Navigate to **Power Platform admin center**.
+
+1. Expand **Resources** and select **Capacity**.
+
+    ![](images/M02/M2-EX1-T3-S2.png)
+
+1. Notice the data in the **Storage capacity usage** panel.
+
+   ![](images/M02/M2-EX1-T3-S3.png)
+
+1. Notice the data under the **Storage capacity by source** panel.
+
+   ![](images/M02/M2-EX1-T3-S4.png)
+
+1. Go to the **Top storage usage by environment** panel and notice the capacity usage by top environments.
+
+   ![](images/M02/M2-EX1-T3-S5.png)
+
+1. Select the **Dataverse** tab from the top row of options.
+
+   ![](images/M02/M2-EX1-T3-S6.png)
+
+1. Locate the **Device Ordering Development** environment storage capacity and select **Details**.
+
+   ![](images/M02/M2-EX1-T3-S7.png)
+
+1. Select the **Chart menu** button at the top right of the first chart and select **Download all tables**.
+
+   ![](images/M02/M2-EX1-T3-S8.png)
+
+1. Open the file that was downloaded as a result.
+
+   ![](images/M02/pp126.png)
+
+1. You should see a list of all tables and their database size in MB.
+
+   ![](images/M02/M2-EX1-T3-S9.png)
+
+1. Close the Excel file. You won’t need to save any changes you’ve made.
+
+1. Go to the navigation pane on the far left and expand **Analytics**, then select **Dataverse**.
+
+    ![](images/M02/M2-EX1-T3-S11.png)
+
 1. Review the visuals.
 
-1. Click **Change filters**.
+13. Select **Change filters**.
 
-    ![](images/M02/image18.png)
-   
-1. Change the date range to between one-week ago and today, and then click **Apply**.
+    ![](images/M02/pp127.png)
 
-   ![](images/M02/image19.png)
-   
-1. The visuals should change to reflect your changes.
+14. Change the **From** date to one week prior today’s date **(1)** and the **To** date to today **(2)**. Select **Apply (3)**.
+
+    ![](images/M02/pp128.png)
+
+15. The visuals should change to reflect your changes.
+
+    ![](images/M02/M2-EX1-T3-S15.png)
 
 
 ## Exercise 2: Configure Dataverse logging for a table
@@ -129,411 +179,381 @@ In this exercise, you will configure Dataverse logging for a table that requires
 
 ### Task 1: Review audit logging in the environment
 
-1. Navigate to the [Power Apps maker portal](https://make.powerapps.com/) and select the **My Sandbox** environment.
-2. Select Solutions and click to open the **Fabrikam Project Management** solution.
+In this task you will, enable auditing for the Project table and its Due Date column, publish customizations, and turn on auditing at the environment level.
 
-    ![](images/M02/image20.png)
-    
-3. Select **Tables** and click to open the **Project** table.
-4. Locate and click to open the **Due Date** column.
+1. Navigate to the **Power Apps** portal, click on Current Environment **(1)** and select the **My Sandbox-<inject key="Deployment ID" enableCopy="false" /> (2)** environment.
 
-    ![](images/M02/image21.png)
-    
-5. Expand the Advanced options section. **Auditing** is enabled for this column.
+   ![](images/pp-1.png)
 
-    ![](images/M02/image22.png)
-    
-6. Click **Cancel** to close the field details pane.
-7. Select **Tables**, select the **Project** table, and then click **Settings**.
+1. Select **Solutions (1)** and choose the **Fabrikam Project Management (2)** solution to open it.
 
-    ![](images/M02/image23.png)
-    
-8. Expand the **Advanced options** section.
-9. Scroll down to the **For this table** section.
-10. Check the **Audit changes to its data** checkbox and click **Save**.
+   ![](images/M02/pp129.png)
 
-    ![](images/M02/image24.png)
-    
-11. Select **All** from the left navigation of the solution.
-12. Click **Publish all customizations** and wait for the publishing to complete.
-13. Navigate to [Power Platform admin center](https://admin.powerplatform.microsoft.com) and select **Environments**.
-14. Select the **My Sandbox** environment and click **Settings**.
+1. Select **Tables (1)** and select the **Project (2)** table. Select **Columns (3)** under the **Schema** section.
 
-    ![](images/M02/image25.png)
-    
-15. Expand **Audit and logs** section and click **Audit settings**.
+   ![](images/M02/pp130.png)
 
-    ![](images/M02/image26.png)
-    
-16. Check the **Start auditing** checkbox and click **Save**.
+1. Locate and select **Due Date** to open it.
 
-    ![](images/M02/image27.png)
-    
+   ![](images/M02/M2-EX2-T1-S5.png)
+
+1. Expand the **Advanced Options** section. Check and ensure that **Enable Auditing (1)** is enabled for this column. A notice will be underneath the option, informing you that auditing is not enabled 
+   for the organization. We will fix this in a later step.
+
+1. Select **Cancel (2)** to close the field details pane.
+
+   ![](images/po-43.png)
+
+1. Navigate back to the Tables by either selecting the **Tables** using the breadcrumbs at the top.
+
+   ![](images/po-44.png)
+
+1. Select the **Project (1)** table radio-button, and then select **Properties (2)** from the ribbon up top.
+
+   ![](images/M02/pp131.png)
+
+1. Expand the **Advanced options** section.
+
+    ![](images/M02/M2-EX2-T1-S10.png)
+
+1. Scroll down to the **For this table** section and select the **Audit changes to its data (1)** checkbox and select **Save (2)**.
+
+    ![](images/M02/pp132.png)
+
+1. Select **All** from the left navigation of the solution.
+
+    ![](images/M02/pp133.png)
+
+1. Select **Publish all customizations** and wait for the publishing to be completed. A green banner will appear to let you know when it is complete.
+
+    ![](images/po-45.png)
+
+    ![](images/po-46.png)
+
+1. Navigate to **Power Platform admin center** and select **Manage(1)**, click on **Environments (2)**, select the **My Sandbox-<inject key="Deployment ID" enableCopy="false" /> (3)** environment and click on **Settings (4)** from the ribbon at the top.
+
+    ![](images/sand.png)
+
+1. Expand **Audit and logs(1)** section and select **Audit settings(2)**.
+
+    ![](images/audit.png)
+
+1. Check on **Start auditing (1)** checkbox, select **Save (2)** and click **Cancel** to close.
+
+    ![](images/startaduit.png)
+
 ### Task 2: Test auditing
 
-1. Navigate to the [Power Apps maker portal](https://make.powerapps.com/) and select the **My Sandbox** environment.
-2. Select **Apps** and click to launch the **Project Admin** application.
+In this task you will, open the Project Admin app, create or edit the Annual Conference project, change its Due Date multiple times, and verify the changes in Audit History.
 
-    ![](images/M02/image28.png)
-    
-3. Click to open the **Annual Conference** project.
+1. Navigate to the **Power Apps** maker portal and make sure your in **My Sandbox-<inject key="Deployment ID" enableCopy="false" />** environment.
 
-    ![](images/M02/image29.png)
-     
-4. Change the **Due Date** and click **Save**.
-
-    ![](images/M02/image30.png)
-    
-5. Change the **Due Date** and save couple more times.
-6. Click **Related** and select **Audit History**.
-
-   ![](images/M02/image31.png)
-    
-7. You should see the change history for each of your changes. Click to open one the change history records.
-
-    ![](images/M02/image32.png)
-    
-8. You should see the **Filed Name**, **Old Value** and **New Value**.
-
-    ![](images/M02/image33.png)
-    
-9. Close the change history record.
-
-
-## Exercise 3: Setup the CoE Starter Kit Power BI Dashboard
-
-### Scenario
-
-In this exercise, you will explore some of the apps and analytics that are part of the Power Platform CoE 
-Starter Kit. We have already installed and configured the starter kit into the tenant you are using for this 
-lab. As part of configuring we imported the solution, shared the apps, configured the flows that 
-synchronize data and published the Power BI report. If you were doing this in your own tenant, you 
-would follow the instructions to complete these steps.
-
-Now in this exercise, you will explore the following key components
-- Power Platform Admin View app
-- Power BI Dashboard
-- The business process that is used by the Developer Compliance process
-
-### Task 1: Explore the Power Platform Admin View app
-
-1. Navigate to [Power Apps maker portal](https://make.powerapps.com/).
-2. Select **Power Platform CoE** environment in the environment selector.
-
-    ![](images/M02/image34.png)
-   
-3. Select Apps in the left navigation and you should see a list of available apps in this environment – click on **Power Platform Admin View**.
-
-    ![](images/M02/image35.png)
-    
-4. When the app starts you will land on the Power Platform Dashboard page. This dashboard gives you a quick look at the most active makers, and environments.
-
-    ![](images/M02/image36.png)
-    
-5. Click on **Power Apps** and you will see a list of all apps in all environments without having to visit each environment. The Flows navigation link does the same      thing for Microsoft Power Automate flows.
-6. Click on the Device Ordering App in the list to open the app details.
-
-    ![](images/M02/image37.png)
-    
-7. On the details notice at the top you can see where the app is in the review process. 
-
-    ![](images/M02/image38.png)
-    
-8. In the **Audit** tab you can see the Business Justification provided by the app maker using the Developer Compliance Center app. In the bottom part is where you as    an admin can provide your risk assessment. You can also tag the app to show in the App Catalog and make it featured. You can customize the CoE entities to add          additional fields here if needed.
-
-    ![](images/M02/image39.png)
-    
-9. Click on **Environments** in the left navigation. This will show you a list of all the environments in your tenant and key metrics like number of apps.
-
-    ![](images/M02/image40.png)
-    
-10. Click on the **User and Team Productivity** environment to open the detail form. 
-11. Review the data available.
-12. Click on the **Connectors** link in the left navigation. This shows all the connectors available.
-
-     ![](images/M02/image41.png)
-     
-13. In the upper right corner search on **Microsoft Dataverse**.
-
-     ![](images/M02/image42.png)
-     
-14. In the search results, click on the **Microsoft Dataverse** connector.
-
-     ![](images/M02/image43.png)
-     
-15. The detail page quickly shows you what apps are using this connector in all environments in your tenant.
-16. Click on the **Makers** link in the left navigation, this shows you all the people that have built apps in your company.
-17. Click on one of the Makers and explore the detail form.
-
-
-### Task 2: Power BI Dashboard
-
-1. Navigate in your browser to Power BI [Power BI](https://app.powerbi.com) and **Sign in** with your lab credentials.
-2. When you see the You have an account with us, click Sign In again and then click Start. 
-
-    ![](images/M02/image44.png)
-    
-3. Click **Start**.
-4. When prompted to Invite more people, click **Skip**.
-5. On the left side navigation click Workspaces and then Create a workspace. We are going to use this 
-   workspace to publish our report to from Power BI Desktop. This would allow you to view it from 
-   PowerBI.com, the mobile app, or even embed it in other places like Microsoft Teams. The workspace 
-   can also be shared with others so they can see the analytics.
-   
-     ![](images/M02/image45.png)
-     
- 6. When prompted click **Try free**.
-
-     ![](images/M02/image46.png)
-     
-7. After the trial is started, you will have to re-navigate to Workspaces and then Create a workspace.
-8. On the Create panel, provide a unique name like CoE and your lab admin user number and click **Save**.
-
-     ![](images/M02/image47.png)
-     
-9. Launch Power BI Desktop on your local computer, if you don’t have it installed you can install it from [Downloads | Microsoft Power BI](https://powerbi.microsoft.com/en-us/downloads/) 
-10. Close the popup window.
-11. Click Sign-in and provide your lab admin account credentials.
-12. Once signed in, click **File**, **open report**, and select **Browse Reports**.
-
-     ![](images/M02/image48.png)
-     
-13. Locate the folder containing lab files you downloaded. 
-14. Change to file type filter to PowerBI template files. Select the Production_CoEDashboard.pbit file.
-15. You will be asked to provide your org URL. Let’s go find it.
-
-     ![](images/M02/image49.png)
-     
-16. Navigate to [Power Platform admin center](https://admin.powerplatform.microsoft.com) and select **Environments**.
-17. Locate the **Power Platform COE** environment and click on the name to show the details page.
-
-     ![](images/M02/image50.png)
-     
-18. Right click on the **Environment URL** and select **Copy link**.
-
-     ![](images/M02/image51.png)
-     
-19. Back in Power BI Desktop, paste the **OrgURL** and click **Load**.
-
-     ![](images/M02/image52.png)
-     
-20. Click **continue**. Follow prompts for credentials if they are presented.
-
-     ![](images/M02/image53.png)
-     
-21. The report should load.
-22. Follow the steps below to enable map and filled map visuals:
-    
-    a) Click **File** and select **Options and settings | Options**.
-
-    ![](images/M02/image54.png)
-    
-    b) Select **Security** form the left.
-    
-    c) Scroll down to the **Map and Filled Map visuals** section.
-    
-    d) Check the Use **Map and Filled Map visuals** checkbox.
-    
-    e) Click **Okay** to close the Options dialog.
-    
-    ![](images/M02/image55.png)
-    
-23. Review the Introduction page.
-  
-     ![](images/M02/image56.png)
-     
-24. Select the overview page, notice it gives a good high-level look at our tenant activity. If you have multiple locations, it will quickly highlight which users are     more engaged with building apps. You can also quickly see which environments are most active.
-
-      ![](images/M02/image57.png)
-      
-25. Click through each page using the navigation at the bottom of the app and review the insights available.
-26. Select the **Environments** page.
-
-      ![](images/M02/image58.png)
-      
-27. On the Environments page, use the date range picker and see how it effects the other data on the page. When you are done leave it set at the max date range.
-
-      ![](images/M02/image59.png)
-      
-28. Select the **Apps** page.
-29. On the Apps page notice the Creation Trend, this is a good way to watch adoption progress.
-
-     ![](images/M02/image60.png)
-     
-30. Click through the other pages and review the data available.
-31. Click **Publish**.
-32. Save the report if prompted.
-33. Select the workspace you created and click **Select**.
-
-     ![](images/M02/image61.png)
-     
-34. Wait for the publishing to complete and click **Got it**.
-
-     ![](images/M02/image62.png)
-     
-35. Navigate to [Power BI](https://app.powerbi.com). Click on **Workspaces** and **CoE Workspace**.
-36. Select the **Content** tab and click to open the report.
-
-     ![](images/M02/image63.png)
-     
-37. Select the Environments page. Use the date slider to ensure the date range includes the last month.
-
-     ![](images/M02/image64.png)
-     
-38. You have now successfully deployed the Power BI reports that come with the CoE starter kit.
-
-
-## Exercise 4: Perform a risk assessment of overshared resources
-
-### Scenario
-
-We were going to perform a risk assessment to look for apps that have been over shared in your tenant. 
-To accomplish this, you are going to use the Power BI report that you just published to look for apps that 
-are over shared.
-
-### Task 1: Locate Overshared Apps
-
-1. Navigate to the [Power BI report](https://protection.office.com/) you just published
-2. Click on the **Apps** page in the report 
-3. Click on the Show navigation button and select **Apps Risk Assessment**.
-
-    ![](images/M02/image65.png)
-    
-4. The list of apps you'll see now is the ones that qualify for the default criteria. We want to focus on the ones that have been shared with the entire organization      and validate that they are appropriate.
-5. In the filter panel, select True in the Shared with Everyone section.
-
-    ![](images/M02/image66.png)
-    
-6. The filter will take place immediately and you will see a small list of apps that have been shared with 
-   everyone. In many cases a quick evaluation of the name of the app would indicate whether it was 
-   appropriate but it also allows you to drill down into more details by hovering your mouse pointer 
-   over the name of the app. You might also use the owner name to contact the person who made the 
-   app to get more details to determine if it was appropriate to share with everyone.
-   
-   
-## Exercise 5: How much is a connector used in your organization
-
-### Scenario
-
-Using the Power BI report, you can easily see what apps and flows are using a connector. In this exercise you will find out who is using the SharePoint connector.
-
-### Task 1: Locate resources that use the SharePoint connector
-
-1. Navigate to the [ Power BI report](https://protection.office.com/) you just published
-2. Select the App **Connections page** in the report 
-3. In the filter panel, in the **Connector** section search for SharePoint and select it.
-
-    ![](images/M02/image67.png)
-    
-4. The page will now filter on makers, flows and apps that use SharePoint.
-5. Using this you could evaluate things like impact of changing DLP policies or other governance or training that might be needed related to a connector.
-
-
-## Exercise 6: Review tenant audit logs (Optional if you have time)
-
-### Scenario
-
-All other auditing of Power Apps and Power Automate flows (other than CDS data modification) are 
-viewed through the Office 365 Security and Compliance site.
-
-Prior to use, this must be enabled by a global tenant administrator using these instructions. In the tenant 
-you are using we have already completed that for you as well as granting you permission to view the 
-audit log data for the tenant. That was done using the PowerShell command Add-RoleGroupMember 
-“Compliance Management” -Member your user.
-
-In this exercise, you will be using the log search and alert tools to work with the audit data.
-
-### Task 1: Review audit logging in the environment
-
-1. Navigate to https://Protection.office.com 
-2. Expand **Search**. 
-3. Select **Audit log search**. 
-
-   ![](images/M02/image68.png)
-   
-4. Click **Search** using the default search criteria.
-
-    ![](images/M02/image69.png)
-    
-5. Review the items displayed; drill into a few of them to see the type of data available.
-6. Click **Export Results**. You can download the data if you like. Using export, you can open the data in other tools for analysis.
-
-    ![](images/M02/image70.png)
-    
-7. Click **Audit search** from. 
-8. Click on the **Activities** dropdown.
-
-    ![](images/M02/image71.png)
-    
-8. Select all **Power Apps and Power Automate** activities.
-9. Click **Search** again.
-10. Review the results.
-11. Look for an activity of Edited Flow, click on the item to open the detail. Review what data is provided. 
-12. A common task is to look at all activity for a particular user. Copy the user from this Edited flow activity and go back to the Audit search. 
-13. Paste the user you copied into the Users filter and click search again. Now you are looking at all the activity for a single user.
-14. Try clicking on an item to view detail. Copy the Item field and then go back to the list and click the filter results. Paste the item info you just copied into the     filed. The results list will now only show activities related to that item. For example, you could use this to show all activities for a specific flow.
-
-
-## Exercise 7: Get notification of new apps, flows and connectors (Optional if you have time)
-
-### Scenario
-
-In this exercise, you will be using one of the pre-built Power Automate templates that run on a schedule 
-and looks for newly created canvas apps, flows and connectors and sends you an email.
-
-### Task 1: Create the flow from the template
-
-1. Navigate to https://flow.microsoft.com and sign in.
-2. Make sure **Power Platform COE** environment is selected. Note: This environment is where the CoE starter kit is installed and is intended to be our dedicated admin    environment. Even if you don’t use the starter kit, having a dedicated admin environment can be helpful.
-
-    ![](images/M02/image72.png)
-    
-3. **Paste the URL and press enter**. https://us.flow.microsoft.com/enus/galleries/public/templates/0b2ffb0174724ad6b4681728c0f53062/get-list-of-new-powerappsflows-and-connectors/
-4. Click **Sign in**.
-
-    ![](images/M02/image73.png)
-    
-5. Select the user you are signed in as.
-6. Click sign in for each of the rest of the connectors.
-7. Click **Continue**.
-
-    ![](images/M02/image74.png)
-    
-8. Examine the flow steps and then click **Flow Checker**. You may need to adjust the zoom of your browser to see all of the steps.
-
-    ![](images/M02/image75.png)
-    
-9. There should be no errors.
-10. Click **Save**. 
-11. Click on the **back arrow**.
-
-    ![](images/M02/image76.png)
-    
-12. The flow should have one run in progress.
-
-     ![](images/M02/image77.png)
-     
-13. Wait for the flow run to complete and then click to open the run. You can refresh to see the updated status of the flow.
-
-      ![](images/M02/image78.png)
-      
-14. Examine the flow run.
-
-      ![](images/M02/image79.png)
-      
-15. Click **App launcher** and select **Outlook**. 
-
-      ![](images/M02/image80.png)
-      
-16. Navigate to https://outlook.office.com/ 
-17. You should get an email from the flow. Open the email.
-
-     ![](images/M02/image81.png)
-     
-17. The report should list flows, Power Apps, connectors in tables.
-
-     ![](images/M02/image82.png)
-     
-In addition to simply seeing who is building what in your tenant you can also use the list of new connectors to evaluate if you need to adjust your DLP policies.
+1. Select **Apps (1)** and select the **Project Admin (2)** application to launch.
 
+   ![](images/po-49.png)
+
+1. If you can see the **Annual Conference** project select it to open it and skip to step 5, if you do not see it, continue with the steps below.
+
+   ![](images/M02/po24.png)
+
+   - Create a new project by selecting the green **+ New** from the ribbon at the top.
+
+     ![](images/M02/po25.png)
+
+   - For the **Title**, enter **Annual Conference**. Choose the **Due date** as today’s date.
+
+   - Then, select **Save & Close**.
+
+     ![](images/M02/M2-EX2-T2-S6.png)
+
+1. From this screen, reopen the **Annual Conference** project.
+
+1. Change the **Due Date (1)** to any date in the future and select **Save (2)**.
+
+   ![](images/M02/pp135.png)
+
+1. Change the **Due Date** and save a couple more times.
+
+1. Select **Related (1)** and select **Audit History (2)**.
+
+    ![](images/po-50.png)
+
+1. You should see the change history for each of your changes. Select **Update/Create** to open one of the change history records.
+
+    ![](images/M02/pp136.png)
+
+     >**Note**: Sometimes it might take sometime to get open, no need to wait. Please proceed with the next Exercise.
+
+1. You should see the **Filed Name**, **Old Value** and **New Value**.
+
+1. Select **Close** to close the update record.
+
+    ![](images/M02/pp137.png)
+
+## Exercise 3: Set up inventory components
+
+This article guides you in setting up the inventory component of the CoE Starter Kit. The inventory centralizes data on apps, flows, and makers, helping you monitor and manage your Power Platform environment. It enables admin apps, dashboards, and tools like DLP Editor and Set App Permissions for better governance.
+
+Now in this exercise, you will explore the following key components:
+
+- Import the Creator Kit and make connections
+- Set up the Inventory components using the Setup Wizard
+
+### Task 1 :  Import the Creator Kit and make connections
+
+In this task you will, install the Creator Kit from AppSource, configure the HTTP with Microsoft Entra ID connection, and import the CoE Starter Kit core and governance solutions into the the Power Platform COE environment.
+
+### Installation of Creator Kit
+
+1. Go to the [Creator Kit page on AppSource](https://appsource.microsoft.com/en-US/product/dynamics-365/microsoftpowercatarch.creatorkit1?tab=Overview) page.
+
+    > **Note:** If required sign in to an account with ODL Credentials
+
+2. Select the button **Get it now**.
+
+   ![](images/M02/M2-EX3N-T1-S1.png)
+
+    >**Note:** Ensure your Power apps environment is in **Power Platform COE**.
+3. The App Source install experience will launch the **Power Platform admin center** and ask you to identify the target Environment. Close the popups and continue.
+
+4. Choose the **Power Platform COE (1)** Environment, review and agree to the two agreement checkboxes **(2)(3)**, then select the **Install (4)** button to continue the installation.
+
+    ![](images/createinst.png)
+
+1. Installation may take some time; meanwhile, you can continue with the next steps.
+
+    ![](images/M02/pv6.png)
+
+### Create Connections
+1. Go to [Power Automate](https://make.powerautomate.com/) in new tab.
+
+1. Select your **Power Platform COE** environment.
+
+    ![](images/M02/M2-EX3N-T1-S3.png)
+
+1. Select **More (1)** from left navigation and click on  **Connections (2)** 
+
+    ![](images/M02/pv7.png)
+
+1. Select **+ New Connection**.
+
+    ![](images/M02/pv8.png)
+
+1. Search for **HTTP with Microsoft Entra ID (1)** and then click on **HTTP with Microsoft Entra ID (preauthorized) (2)**
+
+    ![](images/M02/pv9.png)
+
+1. Set the **Base Resource URL (1)** and **Microsoft Entra ID Resource URI (Application ID URI) (2)** to https://graph.microsoft.com/. Click **Create (3)**.
+
+    ![](images/M02/pv10.png)
+
+    > **Note:** On the **Pick an account** pop-up, select <inject key="AzureAdUserEmail"></inject>.
+
+### Import the core components solution
+1. Open a new tab in the browser, copy and paste the link, and download the **[CoE Starter Kit](https://aka.ms/CoeStarterKitDownload)** to your virtual machine.
+
+1. You can see the downloaded file in the right top corner, **download (1)** section. Click on the **Folder (2)** icon to open the foder in the File explorer.
+
+    ![](images/M02/pv11.png)
+
+1. Locate the downloaded **CoEStarterKit.zip** file.
+
+1. Right-click on the **ZIP file (1)** and select **Extract All... (2)**.
+
+    ![](images/M02/pv12.png)
+
+1. In the dialog box that appears, review the **destination path (1)** and then click on the"**Extract (2)** button to unzip the contents.
+
+    ![](images/M02/pv13.png)
+
+    > **Note:** The CoE Starter Kit compressed file contains all solution components in addition to the non–solution-aware components that make up the CoE Starter Kit. 
+
+1. Before proceeding to the next step, navigate back to the **Power Platform Admin Center**, **Refresh** the portal and navigate to the **Power Platform COE** environment and select **Dynamic 365 apps** under Resources.
+
+    ![](images/M02/dy365.png)
+
+1. Ensure the **Creator Kit is installed** 
+
+    ![](images/M02/ckinst.png)
+
+1. Navigate back to the [Power Apps](https://make.powerapps.com/) portal.
+
+1. Choose the **Power Platform COE (1)** Environment. In the left menu, click **Solutions (2)**.
+
+    ![](images/po-51.png)
+
+1. Click the **Import Solution** button at the top.
+
+    ![](images/M02/pv14.png)
+
+1. Click **Browse (1)**.
+
+1. Navigate to  **C:\Users\demouser\Downloads\CoEStarterKit (1)** then select **CenterOfExcellenceCoreComponents_4_50_2_managed.zip (2)** solution file from the extracted folder then click on **Open (3)**.
+
+    ![](images/f1.png)
+
+1. Click **Next**.    
+
+1. Review the details, click **Next** twice, leave all environment variable values as default until you see the Import button.
+
+1. Finally, click on **Import**.
+
+    ![](images/M02/pv17.png)
+
+14. Please wait until this is complete before moving on to new tasks. This may take **20–30 minutes**. During the import, you may see a **warning notification** at the top of the screen (e.g., "Flow imported with warnings"). This is expected and does not necessarily indicate a failure.
+
+    ![](images/M02/ppm2.png)
+
+
+### Install COE Governance Solution.
+
+1. Go to the **Solutions (1)** tab.
+
+1. Click on **Import solution (2)** from the top-menu.
+
+    ![](images/M02/ppm3.png)
+
+1. Click on **Browse (1)**.
+
+1. Navigate to **C:\Users\demouser\Downloads\CoEStarterKit (2)** folder then select the following file **CenterofExcellenceAuditComponents_3_27_3_managed.zip (3)** and then click on **Open (4)**.
+
+    ![](images/f2.png)
+
+1. Review the details, click **Next**, leave all environment variable values as default until you see the Import button.
+
+1. Finally, click on **Import**.
+
+    ![](images/M02/pv18.png)
+
+1. Wait for the import process to complete. This may take **5 minutes**. During the import, you may see a **warning notification** at the top of the screen (e.g., "Flow imported with warnings"). This is expected and does not necessarily indicate a failure.
+
+1. Please do **Refresh (1)** the portal then you will be able to see the successfully imported message **(2)**.
+
+    ![](images/M02/ppm5.png)
+
+1. Once the import is complete, navigate to **Solutions (1)** then **All (2)** and then you can verify the installation by checking the **Center of Excellence – Core Components (3)** and **Center of Excellence - Governance Components (4)**.
+
+    ![](images/M02/ppm6.png)
+
+### Task 2: Set up the Inventory components using the Setup Wizard
+
+In this task you will, launch the CoE Setup and Upgrade Wizard, configure environment variables and personas, run setup and inventory flows, and complete the setup to enable inventory dashboards and apps.
+
+1. From the **Solution (1)**, navigate to **Managed (2)** refresh the tab and open the **Center of Excellence - Core Components (3)** solution.
+
+    ![](images/M02/pv19.png)
+
+1. Navigate to **Apps (1)** then click on the ellipse in **COE Admin Command Center (2)** app and then **Play (3)**.
+
+    ![](images/M02/pv20.png)
+
+1. Click **Sign In (1)** for RSS, then click **Allow (2)**. 
+
+    ![](images/M02/M2-EX3N-T1-S10B.png)
+
+1. Click **Environment Varibles (1)** under **CoE configuration** from left navigation pannel and then click **admin_AdminMail (2)**, then click **edit (3)**.
+
+    ![](images/M02/pv21.png)
+
+1. Paste **<inject key="AzureAdUserEmail"></inject> (1)** email id in the **Value** section , then click **Save (2)**
+
+    ![](images/M02/ppm7.png)
+
+1. Now return to the previous tab where your “Center of Excellence - Core Components” is open.
+
+    ![](images/M02/ppm8.png)
+
+1. Open the CoE Setup and Upgrade Wizard app. Click **Apps** **(1)**, Click the three ellipses (⋯) next to the **CoE Setup and Upgrade Wizard** **(2)**. Select **Play** **(3)** to launch the app.
+
+    ![](images/M02/pv22.png)
+
+1. Grant all app permission and click **Allow**.
+
+    ![](images/M02/M2-EX3N-T1-S12.png)
+
+1. Confirm pre-requisites: Click **Next**.
+
+    ![](images/M02/pv23.png)
+
+1. Configure communication methods: Click **configure group** and select **Create new group** 
+for persona.
+
+    ![](images/M02/pv24.png)
+
+1. You will be navigate to azure portal. Select **Microsoft 365** **(1)** for group type. Give group name as **COE Admin Group** **(2)**. Click **No Owners Selected** **(3)**. 
+
+    ![](images/M02/pv-23.png)
+
+1. Search for **odl (1)**, select the **environment email ID (2)** and then **Select (3)** Similarly, you can select multiple members to assign to the Admin persona. 
+
+    ![](images/M02/pv26.png)
+
+1. Once you've made your selections, click **Create** to proceed.    
+
+    ![](images/M02/pv27.png)
+
+1. Navigate back to the **CoE Setup and Upgrade Wizard** tab. **Refresh** the page, then proceed to configure the Admin persona by selecting the newly created group **COE Admin Group (1)** and then **Select group (2)**.
+
+    ![](images/M02/pv28.png)
+
+1. In the same way, you can create new groups for the **Maker persona** and **User persona**. For now, you can select the same **CoE Admin Group** for both.
+
+1. After completing all three configuration, click **Next** to continue.
+
+    ![](images/M02/pv29.png)
+
+1. **Configure mandatory settings**: Review tenant id from Service principal details in the environment section of lab guide and select **Next**
+
+1. **Configure inventory data source** : Click **Next**.
+
+    ![](images/M02/pv30.png)
+
+1. **Run setup flows**: Click **Refresh**, wait about 5 minutes for the process to complete, then refresh again. Once done, click **Next**.
+
+    ![](images/M02/ppm9.png)
+
+1. **Run Inventory flows**: Click toggle button for all the flows available on the page, wait until all the flows are removed from the page and then click **Next**.
+
+    ![](images/M02/pv31.png)
+
+     >**Note**: This page might take some to load please wait untill its loaded. Proceed Next if no flows on the page
+
+1. **Configure dataflows**: Click **Next**.
+
+1. **Share apps**: Click **Next**.
+
+1. Publish PowerBI dashboard: Click **Next** and then **Done**
+
+1. Close **CoE Setup and Upgrade Wizard** application.
+ 
+<!--
+1. Navigate to the **More features** page and select **Configure the feature** in **Compliance process**.
+
+    ![](images/M02/M2-EX3N-T1-S15.png)
+
+    > **Note:** The app will guide you through the setup process.
+
+1. Click **Refresh**. If a pop-up appears regarding flow configuration, proceed as prompted.
+
+1. On the **Get Started** screen, click **Next**.
+
+1. On the **Exempt environments from this process** screen, click **Next**.  
+    ![](images/M02/M2-EX3N-T1-S16.png)
+
+1. On the **Configure settings** screen, click **Next**.
+
+1. On the **Turn on flows** screen, toggle **On** for all listed flows, then click **Next**.
+
+1. On the **Share Apps** screen, click **Done**.
+-->
+
+### Review
+
+In this lab, you have accomplished the following:
+
+- Exercise 1 - Explored the out-of-the-box analytics
+- Exercise 2 – Configured Dataverse logging for a table
+- Exercise 3 - Set up inventory components
+
+### You have successfully completed this module.
 
